@@ -1,23 +1,24 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import headerStyles from './header.module.scss'
 
 export default function Header() {
   return (
-    <header>
+    <header className={headerStyles.header}>
         <h1>Phillip Store</h1>
         <nav>
             <ul>
                 <li>
-                <p><Link to="/">Home</Link></p>
+                <Link className={headerStyles} to="/">Home</Link>
                 </li>
                 <li>
-                <p><Link to="/blog">Blog</Link></p>
+                <Link to="/blog">Blog</Link>
                 </li>
                 <li>
-                <p><Link to="/about">About</Link></p>
+                <Link to="/about">About</Link>
                 </li>
                 <li>
-                <p><Link to="/contact">Contact</Link></p>
+                <Link to="/contact">Contact</Link>
                 </li>
             </ul>
         </nav>
